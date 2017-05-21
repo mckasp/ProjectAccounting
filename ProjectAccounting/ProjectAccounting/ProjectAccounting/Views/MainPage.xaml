@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAccounting.MainPage"
+             Title="Main Menu">
+  <StackLayout VerticalOptions="CenterAndExpand">
+    <Button Text="Projects"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="OnProjectsClicked"
+            FontSize="50"
+            FontAttributes="Bold" />
+
+    <Button Text="Project Balances"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="OnProjectBalancesClicked"
+            FontSize="50"
+            FontAttributes="Bold"/>
+
+    <Button Text="Cash Registers"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="OnCashRegistersClicked"
+            FontSize="50"
+            FontAttributes="Bold"/>
+
+    <Button Text="Cash Register Balances"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Clicked="OnCashRegisterBalancesClicked"
+        FontSize="50"
+        FontAttributes="Bold"/>
+
+    <Button Text="Cash Ledger"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Clicked="OnCashLedgerClicked"
+        FontSize="50"
+        FontAttributes="Bold"/>
+    
+    <Button Text="Backup database"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="OnBackupDatabaseClicked"
+            FontSize="50"
+            FontAttributes="Bold"/>
+    
+    <Button Text="Restore database"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Clicked="OnRestoreDatabaseClicked"
+        FontSize="50"
+        FontAttributes="Bold"/>
+  </StackLayout>
+</ContentPage>

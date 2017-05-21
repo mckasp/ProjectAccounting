@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjectAccounting.ProjectLookupPage" Title="Select a project">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem>
+      <ToolbarItem.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource" Android="plus.png" />
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
+      
+   <StackLayout Margin="20" VerticalOptions="StartAndExpand">   
+     <ListView x:Name="lookupListView" Margin="50" ItemSelected="OnLookupProjectSelected">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+
+              <Label Text="{Binding Code}"
+                     TextColor="Black"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     VerticalTextAlignment="Center"
+                     HorizontalOptions="Start"
+                     FontSize="25"
+                     FontAttributes="Bold" />
+              <Label Text="{Binding Name}"
+                     TextColor="Black"
+                     Grid.Row="0"
+                     Grid.Column="1"
+                     VerticalTextAlignment="Center"
+                     HorizontalOptions="Start"
+                     FontSize="25"
+                     FontAttributes="Bold" />
+            
+         
+          </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+   
+    <Button Text="Cancel"
+            TextColor="Black"
+            FontSize="25"
+            FontAttributes="Bold"
+            Clicked="OnCancelClicked" />   
+
+   </StackLayout> 
+</ContentPage>

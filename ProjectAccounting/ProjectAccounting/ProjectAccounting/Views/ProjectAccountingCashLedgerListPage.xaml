@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ProjectAccounting.ProjectAccountingCashLedgerListPage" Title="Cash Ledger Entries">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="+ Create New Cash Ledger Entry" Clicked="OnCashLedgerEntryAdded">
+      <ToolbarItem.Icon>
+        <OnPlatform x:TypeArguments="FileImageSource" Android="plus.png" />
+      </ToolbarItem.Icon>
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
+  <ListView x:Name="listView" Margin="20" ItemSelected="OnListCashLedgerEntrySelected">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+            <!--
+            <Label Text="{Binding PostingDate, StringFormat='{0:dd-MM-yyyy}'}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Description}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding CashRegister}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Project}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+            <Label Text="{Binding Amount}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+            -->
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="170" />
+              <ColumnDefinition Width="500" />
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="{Binding PostingDate, StringFormat='{0:dd-MM-yyyy}'}"
+                   TextColor="Black"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="Start"
+                   FontSize="25"
+                   FontAttributes="Bold" />
+            <Label Text="{Binding Description}"
+                   TextColor="Black"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="Start"
+                   FontSize="25"
+                   FontAttributes="Bold" />
+            <Label Text="{Binding CashRegister}"
+                   TextColor="Black"
+                   Grid.Row="0"
+                   Grid.Column="2"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="Start"
+                   FontSize="25"
+                   FontAttributes="Bold" />
+            <Label Text="{Binding Project}"
+                   TextColor="Black"
+                   Grid.Row="0"
+                   Grid.Column="3"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="Start"
+                   FontSize="25"
+                   FontAttributes="Bold" />
+            <Label Text="{Binding Amount,StringFormat='{0:F2}'}"
+                   TextColor="Black"
+                   Grid.Row="0"
+                   Grid.Column="4"
+                   VerticalTextAlignment="Center"
+                   HorizontalOptions="End"
+                   FontSize="25"
+                   FontAttributes="Bold" />
+          </Grid>          
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>

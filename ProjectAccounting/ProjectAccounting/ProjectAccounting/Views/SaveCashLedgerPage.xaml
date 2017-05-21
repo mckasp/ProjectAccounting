@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAccounting.ProjectAccountingCashLedgerPage"
+             xmlns:toolkit="clr-namespace:ProjectAccounting;assembly=ProjectAccounting"
+             xmlns:local="ProjectAccountig"
+             Title="{Binding Description}">
+  <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+    <Label Text="Posting Date"
+           TextColor="Black"
+           FontSize="25"
+           FontAttributes="Bold"/>
+    <DatePicker x:Name="PostingDatePicker" Date="{Binding Path=PostingDate}">
+      <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+    </DatePicker>
+    <Label Text="Description"
+           TextColor="Black"
+           FontSize="25"
+           FontAttributes="Bold"/>
+    <Entry Text="{Binding Description}"
+           Placeholder="Enter a description"
+           TextColor="Black"
+           FontSize="25"
+           FontAttributes="Bold"/>
+    <Button Text="Lookup Cash Register"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Clicked="OnLookupCashRegisterClicked" />
+    <Label Text="Cash Register"
+           TextColor="Black"
+           FontSize="25"
+           FontAttributes="Bold"/>
+    <Entry x:Name="CashRegisterEntry"
+           Text="{Binding CashRegister}"
+           TextColor="Black"
+           FontSize="25"
+           FontAttributes="Bold"/>
+    <Button Text="Lookup Project"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Clicked="OnLookupProjectClicked" />
+    <Label Text="Project"
+           TextColor="Black"
+           FontSize="25"
+           FontAttributes="Bold"/>
+    <Entry x:Name="ProjectEntry"
+           Text="{Binding Project}"
+           TextColor="Black"
+           FontSize="25"
+           FontAttributes="Bold">
+    </Entry>
+    <Label Text="Amount"
+           TextColor="Black"
+           FontSize="25"
+           FontAttributes="Bold"/>
+    <Entry Text="{Binding Amount,StringFormat='{0:F2}'}"
+           TextColor="Black"
+           FontSize="25"
+           FontAttributes="Bold"/>
+    <Button Text="Save"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Clicked="OnSaveClicked" />
+    <Button Text="Delete"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Clicked="OnDeleteClicked" />
+    <Button Text="Cancel"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Clicked="OnCancelClicked" />
+  </StackLayout>
+</ContentPage>
+-->

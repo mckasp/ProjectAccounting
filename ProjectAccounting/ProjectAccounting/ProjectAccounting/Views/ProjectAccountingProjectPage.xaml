@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjectAccounting.ProjectAccountingProjectPage"
+             Title="{Binding Name}">
+  <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="80" />
+        <RowDefinition Height="80" />
+        <RowDefinition Height="80" />
+        <RowDefinition Height="80" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      
+      <Label Text="Code"
+             Grid.Row="0"
+             Grid.Column="0"
+             TextColor="Black"
+             FontSize="25"
+             FontAttributes="Bold"/>
+      
+      <Entry Text="{Binding Code}"
+             Grid.Row="0"
+             Grid.Column="1"
+             TextColor="Black"
+             FontSize="25"
+             FontAttributes="Bold"/>
+      
+      <Label Text="Name"
+             Grid.Row="1"
+             Grid.Column="0"
+             TextColor="Black"
+             FontSize="25"
+             FontAttributes="Bold"/>
+      <Entry Text="{Binding Name}"
+             Grid.Row="1"
+             Grid.Column="1"
+             TextColor="Black"
+             FontSize="25"
+             FontAttributes="Bold"/>
+      
+      <Button Text="Save"
+              Grid.Row="3"
+              Grid.Column="1"
+              TextColor="Black"
+              FontSize="25"
+              FontAttributes="Bold"
+              Clicked="OnSaveClicked" />
+      
+      <Button Text="Delete"
+              Grid.Row="3"
+              Grid.Column="2"
+              TextColor="Black"
+              FontSize="25"
+              FontAttributes="Bold"
+              Clicked="OnDeleteClicked" />
+      
+      <Button Text="Cancel"
+              Grid.Row="3"
+              Grid.Column="3"
+              TextColor="Black"
+              FontSize="25"
+              FontAttributes="Bold"
+              Clicked="OnCancelClicked" />
+    </Grid>
+  </StackLayout>
+</ContentPage>
